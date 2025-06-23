@@ -4,7 +4,7 @@ description:        "The revolution is happening, and it needs a record keeper."
 author:             "Yolanda Brown"
 baseurl:            "/startbootstrap-clean-blog-jekyll"
 url:                "https://startbootstrap.github.io"
-remote_theme: "startbootstrap/clean-blog-jekyll"
+remote_theme: jekyllthemes/clean-blog
 
 
 # Social Profiles
