@@ -30,6 +30,7 @@ layout: default
         {{ content }}
 
         <!-- Home Post List -->
+        {% if site.posts.size > 0 %}
         {% for post in site.posts limit : 5 %}
 
         <article class="post-preview">
@@ -55,6 +56,8 @@ layout: default
         <hr>
 
         {% endfor %}
+        {% endif %}
+
 
         <!-- Pager -->
         <div class="clearfix">
