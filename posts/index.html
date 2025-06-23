@@ -1,48 +1,58 @@
----
-layout: page
-title: Posts
-background: '/img/bg-post.jpg'
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Verbatim, Baby!</title>
+  <style>
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#ffeef2;color:#333;text-align:center}
+    header{padding:60px 15px}
+    header img{width:180px;border-radius:50%}
+    h1{font-size:2.4rem;margin:10px 0 5px}
+    p.lead{font-size:1.1rem;margin:0 0 25px}
+    .btn{display:inline-block;padding:12px 28px;background:#ff5c8d;color:#fff;text-decoration:none;border-radius:8px;font-weight:bold}
+    .btn:hover{background:#e04c7b}
+    section{max-width:700px;margin:40px auto;padding:0 15px;line-height:1.6}
+    footer{margin:50px 0 20px;font-size:.85rem;color:#666}
+  </style>
+</head>
+<body>
 
-{% for post in paginator.posts %}
+<header>
+  <!-- ✔ Replace with your transparent cupcake PNG -->
+  <img src="https://raw.githubusercontent.com/verbatimbaby/assets/main/logo.png" alt="Cupcake logo">
+  <h1>Verbatim, Baby!</h1>
+  <p class="lead">The revolution is happening, and it needs a record keeper.</p>
+  <a class="btn" href="https://github.com/verbatimbaby/verbatim-baby-samples" target="_blank">📂 View Sample Dataset</a>
+</header>
 
-<article class="post-preview">
-  <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
-    <h2 class="post-title">{{ post.title }}</h2>
-    {% if post.subtitle %}
-    <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-    {% else %}
-    <h3 class="post-subtitle">{{ post.excerpt | strip_html | truncatewords: 15 }}</h3>
-    {% endif %}
-  </a>
-  <p class="post-meta">Posted by
-    {% if post.author %}
-    {{ post.author }}
-    {% else %}
-    {{ site.author }}
-    {% endif %}
-    on {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
+<section>
+  <h2>What We Do</h2>
+  <p>
+    We turn raw, multilingual Southern-African speech into clean, machine-ready text—<br>
+    ethically sourced, privacy-respecting, and laser-annotated for AI training.<br>
+    Need Afrikaans with a Vrystaat twang? Xhosa code-switching? We’ve got clips, transcripts,
+    speaker metadata and more.
   </p>
-</article>
+</section>
 
-<hr>
+<section>
+  <h2>Work With Us</h2>
+  <p>
+    • Custom datasets<br>
+    • STT / TTS QA audits<br>
+    • Consulting on African accent edge-cases<br>
+    • Offline transcription tooling (<em>Verbatim, Baby!</em> app)
+  </p>
+  <p>
+    Email: <a href="mailto:hello@verbatimbaby.co.za">hello@verbatimbaby.co.za</a><br>
+    Blog: <a href="https://YOURBLOGURL">My Coding Journey with ChatGPT</a>
+  </p>
+</section>
 
-{% endfor %}
+<footer>
+  © 2025 Verbatim, Baby! · Built with cupcakes and grit
+</footer>
 
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-
-<div class="clearfix">
-
-  {% if paginator.previous_page %}
-  <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
-    Newer<span class="d-none d-md-inline"> Posts</span></a>
-  {% endif %}
-
-  {% if paginator.next_page %}
-  <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
-  {% endif %}
-
-</div>
-
-{% endif %}
+</body>
+</html>
+Replace old index with simple landing page
